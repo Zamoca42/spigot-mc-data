@@ -6,7 +6,7 @@ services:
     ports:
       - 25565:25565
     environment:
-      TYPE: SPIGOT
+      TYPE: FABRIC
       EULA: "TRUE"
       MEMORY: "1G"
     tty: true
@@ -15,3 +15,19 @@ services:
     volumes:
       # attach a directory relative to the directory containing this compose file
       - ./server-data:/data
+  backup:
+    image: itzg/mc-backup
+    environment:
+      RCON_HOST: mc
+      BACKUP_METHOD: restic
+      RESTIC_PASSWORD: password
+      RESTIC_REPOSITORY: rclone:CFG_NAME:BUCKET_NAME
+    volumes:
+      # mount volume pre-configured using a host mounted file
+      - ./rclone.conf:/config/rclone/rclone.conf
+      # or configure one into a named volume using
+      # docker run -it --rm -v rclone-config:/config/rclone rclone/rclone config
+      # and change the above to
+      # - rclone-config:/config/rclone
+      - ./server-data:/data:ro
+      - backups:/backup
