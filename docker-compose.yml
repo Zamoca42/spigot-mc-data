@@ -9,6 +9,27 @@ services:
       TYPE: FABRIC
       EULA: "TRUE"
       MEMORY: "1G"
+      JVM_OPTS: "
+                 -XX:+IgnoreUnrecognizedVMOptions 
+                 -XX:+UseG1GC 
+                 -XX:+ParallelRefProcEnabled 
+                 -XX:MaxGCPauseMillis=200 
+                 -XX:+UnlockExperimentalVMOptions 
+                 -XX:+DisableExplicitGC 
+                 -XX:+AlwaysPreTouch 
+                 -XX:G1HeapWastePercent=5 
+                 -XX:G1MixedGCCountTarget=4 
+                 -XX:G1MixedGCLiveThresholdPercent=90 
+                 -XX:G1RSetUpdatingPauseTimePercent=5 
+                 -XX:SurvivorRatio=32 
+                 -XX:+PerfDisableSharedMem 
+                 -XX:MaxTenuringThreshold=1 
+                 -XX:G1NewSizePercent=30 
+                 -XX:G1MaxNewSizePercent=40 
+                 -XX:G1HeapRegionSize=8M 
+                 -XX:G1ReservePercent=20 
+                 -XX:InitiatingHeapOccupancyPercent=15 
+                "
     tty: true
     stdin_open: true
     restart: unless-stopped
@@ -18,16 +39,14 @@ services:
   backup:
     image: itzg/mc-backup
     environment:
-      RCON_HOST: mc
-      BACKUP_METHOD: restic
-      RESTIC_PASSWORD: password
-      RESTIC_REPOSITORY: rclone:CFG_NAME:BUCKET_NAME
+      BACKUP_INTERVAL: "6h"
+      # instead of network_mode below, could declare RCON_HOST
+      # RCON_HOST: mc
     volumes:
-      # mount volume pre-configured using a host mounted file
-      - ./rclone.conf:/config/rclone/rclone.conf
-      # or configure one into a named volume using
-      # docker run -it --rm -v rclone-config:/config/rclone rclone/rclone config
-      # and change the above to
-      # - rclone-config:/config/rclone
-      - ./server-data:/data:ro
-      - backups:/backup
+    # mount the same volume used by server, but read-only
+    - ./server-data:/data:ro
+    # use a host attached directory so that it in turn can be backed up
+    # to external/cloud storage
+    - ./backups:/backups
+    # share network namespace with server to simplify rcon access
+    network_mode: "service:mc"
