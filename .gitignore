@@ -1,4 +1,9 @@
-server-data/spigot_server-1.19.jar
+# server packages
+server-data/fabric-server-mc.1.19-loader.0.14.8-launcher.0.11.0.jar
 
+# folders
 bundler
 logs
+libraries
+.fabric
+versions
