@@ -1,0 +1,124 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 7/4/22, 8:26 AM
+Description: Saving entity NBT
+
+java.io.UncheckedIOException: java.nio.file.NoSuchFileException: /data/mods/ferritecore-5.0.0-fabric.jar
+	at net.fabricmc.loader.impl.util.LoaderUtil.normalizeExistingPath(LoaderUtil.java:42)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getCodeSource(KnotClassDelegate.java:507)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getMetadata(KnotClassDelegate.java:355)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:330)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:218)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at malte0811.ferritecore.fastmap.immutable.FastMapEntryImmutableMap.entrySet(FastMapEntryImmutableMap.java:34)
+	at net.minecraft.class_2512.method_10686(class_2512.java:252)
+	at net.minecraft.class_1560.method_5652(class_1560.java:203)
+	at net.minecraft.class_1297.method_5647(class_1297.java:1706)
+	at net.minecraft.class_1297.method_5786(class_1297.java:1642)
+	at net.minecraft.class_1297.method_5662(class_1297.java:1650)
+	at net.minecraft.class_5565.method_31734(class_5565.java:109)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)
+	at net.minecraft.class_5565.method_31760(class_5565.java:107)
+	at net.minecraft.class_5579.method_31812(class_5579.java:300)
+	at net.minecraft.class_5579.method_31846(class_5579.java:381)
+	at it.unimi.dsi.fastutil.longs.LongOpenHashSet.forEach(LongOpenHashSet.java:802)
+	at net.minecraft.class_5579.method_31829(class_5579.java:375)
+	at net.minecraft.class_3218.method_14176(class_3218.java:766)
+	at net.minecraft.server.MinecraftServer.method_3723(MinecraftServer.java:527)
+	at net.minecraft.server.MinecraftServer.method_39218(MinecraftServer.java:551)
+	at net.minecraft.server.MinecraftServer.method_3748(MinecraftServer.java:844)
+	at net.minecraft.server.MinecraftServer.method_29741(MinecraftServer.java:665)
+	at net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:258)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.nio.file.NoSuchFileException: /data/mods/ferritecore-5.0.0-fabric.jar
+	at java.base/sun.nio.fs.UnixException.translateToIOException(Unknown Source)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.UnixPath.toRealPath(Unknown Source)
+	at net.fabricmc.loader.impl.util.LoaderUtil.normalizeExistingPath(LoaderUtil.java:40)
+	... 27 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.fabricmc.loader.impl.util.LoaderUtil.normalizeExistingPath(LoaderUtil.java:42)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getCodeSource(KnotClassDelegate.java:507)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.getMetadata(KnotClassDelegate.java:355)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:330)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassDelegate.loadClass(KnotClassDelegate.java:218)
+	at net.fabricmc.loader.impl.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(Unknown Source)
+	at malte0811.ferritecore.fastmap.immutable.FastMapEntryImmutableMap.entrySet(FastMapEntryImmutableMap.java:34)
+	at net.minecraft.class_2512.method_10686(class_2512.java:252)
+	at net.minecraft.class_1560.method_5652(class_1560.java:203)
+
+-- Entity being saved --
+Details:
+	Entity Type: minecraft:enderman (net.minecraft.class_1560)
+	Entity ID: 8389
+	Entity Name: Enderman
+	Entity's Exact location: 184.30, 66.00, 207.12
+	Entity's Block location: World: (184,66,207), Section: (at 8,2,15 in 11,4,12; chunk contains blocks 176,-64,192 to 191,319,207), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.class_1297.method_5647(class_1297.java:1706)
+	at net.minecraft.class_1297.method_5786(class_1297.java:1642)
+	at net.minecraft.class_1297.method_5662(class_1297.java:1650)
+	at net.minecraft.class_5565.method_31734(class_5565.java:109)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Unknown Source)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(Unknown Source)
+	at net.minecraft.class_5565.method_31760(class_5565.java:107)
+	at net.minecraft.class_5579.method_31812(class_5579.java:300)
+	at net.minecraft.class_5579.method_31846(class_5579.java:381)
+	at it.unimi.dsi.fastutil.longs.LongOpenHashSet.forEach(LongOpenHashSet.java:802)
+	at net.minecraft.class_5579.method_31829(class_5579.java:375)
+	at net.minecraft.class_3218.method_14176(class_3218.java:766)
+	at net.minecraft.server.MinecraftServer.method_3723(MinecraftServer.java:527)
+	at net.minecraft.server.MinecraftServer.method_39218(MinecraftServer.java:551)
+	at net.minecraft.server.MinecraftServer.method_3748(MinecraftServer.java:844)
+	at net.minecraft.server.MinecraftServer.method_29741(MinecraftServer.java:665)
+	at net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:258)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19
+	Minecraft Version ID: 1.19
+	Operating System: Linux (amd64) version 5.4.0-1018-aws
+	Java Version: 17.0.3, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 668499184 bytes (637 MiB) / 1073741824 bytes (1024 MiB) up to 1073741824 bytes (1024 MiB)
+	CPUs: 1
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+	Identifier: Intel64 Family 6 Model 79 Stepping 1
+	Microarchitecture: Broadwell (Server)
+	Frequency (GHz): 2.30
+	Number of physical packages: 1
+	Number of physical CPUs: 1
+	Number of logical CPUs: 1
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 992.56
+	Virtual memory used (MB): 1808.69
+	Swap memory total (MB): 0.00
+	Swap memory used (MB): 0.00
+	JVM Flags: 21 total; -Xmx1G -Xms1G -XX:+IgnoreUnrecognizedVMOptions -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:InitiatingHeapOccupancyPercent=15
+	Server Running: true
+	Player Count: 1 / 20; [class_3222['J0ELLE107'/340, l='ServerLevel[world]', x=236.49, y=74.00, z=218.47]]
+	Data Packs: vanilla, file/bukkit (incompatible)
+	World Generation: Stable
+	Is Modded: Definitely; Server brand changed to 'fabric'
+	Type: Dedicated Server (map_server.txt)
