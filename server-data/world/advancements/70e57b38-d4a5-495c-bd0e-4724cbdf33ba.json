@@ -215,6 +215,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/flower_banner_pattern": {
+    "criteria": {
+      "has_oxeye_daisy": "2022-07-07 12:26:03 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/redstone/dispenser": {
     "criteria": {
       "has_bow": "2022-07-04 13:34:25 +0000"
@@ -224,6 +230,12 @@
   "minecraft:recipes/food/cake": {
     "criteria": {
       "has_egg": "2022-07-02 11:14:32 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/dark_oak_planks": {
+    "criteria": {
+      "has_log": "2022-07-07 12:32:31 +0000"
     },
     "done": true
   },
@@ -679,6 +691,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/baked_potato_from_campfire_cooking": {
+    "criteria": {
+      "has_potato": "2022-07-07 12:32:32 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/oak_slab": {
     "criteria": {
       "has_planks": "2022-07-02 12:49:37 +0000"
@@ -754,6 +772,12 @@
   "minecraft:recipes/brewing/glass_bottle": {
     "criteria": {
       "has_glass": "2022-07-02 11:44:04 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/blue_dye_from_cornflower": {
+    "criteria": {
+      "has_cornflower": "2022-07-07 12:12:07 +0000"
     },
     "done": true
   },
@@ -1041,16 +1065,21 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:snowy_slopes": "2022-07-07 12:15:21 +0000",
       "minecraft:old_growth_pine_taiga": "2022-07-03 06:16:41 +0000",
       "minecraft:taiga": "2022-07-02 10:38:44 +0000",
       "minecraft:beach": "2022-07-02 10:40:30 +0000",
       "minecraft:river": "2022-07-02 11:16:46 +0000",
       "minecraft:stony_shore": "2022-07-02 10:41:48 +0000",
       "minecraft:snowy_taiga": "2022-07-03 11:43:43 +0000",
+      "minecraft:grove": "2022-07-07 12:14:54 +0000",
       "minecraft:cold_ocean": "2022-07-02 10:58:26 +0000",
       "minecraft:forest": "2022-07-02 11:14:08 +0000",
       "minecraft:lush_caves": "2022-07-04 14:03:21 +0000",
-      "minecraft:frozen_ocean": "2022-07-03 11:44:20 +0000"
+      "minecraft:deep_cold_ocean": "2022-07-07 13:05:46 +0000",
+      "minecraft:frozen_ocean": "2022-07-03 11:44:20 +0000",
+      "minecraft:meadow": "2022-07-06 13:25:12 +0000",
+      "minecraft:plains": "2022-07-07 12:11:49 +0000"
     },
     "done": false
   },
@@ -1294,6 +1323,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/light_gray_dye_from_oxeye_daisy": {
+    "criteria": {
+      "has_oxeye_daisy": "2022-07-07 12:26:03 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/tools/stone_axe": {
     "criteria": {
       "has_cobblestone": "2022-07-02 10:41:56 +0000"
@@ -1506,6 +1541,7 @@
       "cooked_cod": "2022-07-03 14:19:14 +0000",
       "pumpkin_pie": "2022-07-04 12:06:03 +0000",
       "dried_kelp": "2022-07-02 13:45:49 +0000",
+      "cooked_chicken": "2022-07-05 15:20:08 +0000",
       "cooked_salmon": "2022-07-02 11:26:42 +0000"
     },
     "done": false
@@ -1669,7 +1705,8 @@
   "minecraft:husbandry/bred_all_animals": {
     "criteria": {
       "minecraft:sheep": "2022-07-03 13:00:06 +0000",
-      "minecraft:cow": "2022-07-03 11:32:33 +0000"
+      "minecraft:cow": "2022-07-03 11:32:33 +0000",
+      "minecraft:axolotl": "2022-07-06 15:46:23 +0000"
     },
     "done": false
   },
@@ -1805,6 +1842,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/dark_oak_wood": {
+    "criteria": {
+      "has_log": "2022-07-07 12:32:31 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/orange_stained_glass": {
     "criteria": {
       "has_glass": "2022-07-02 11:44:04 +0000"
@@ -1865,6 +1908,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/food/baked_potato_from_smoking": {
+    "criteria": {
+      "has_potato": "2022-07-07 12:32:32 +0000"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/dried_kelp": {
     "criteria": {
       "has_dried_kelp_block": "2022-07-02 13:45:21 +0000"
@@ -1892,6 +1941,12 @@
   "minecraft:recipes/building_blocks/granite_slab": {
     "criteria": {
       "has_granite": "2022-07-02 11:23:57 +0000"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/baked_potato": {
+    "criteria": {
+      "has_potato": "2022-07-07 12:32:32 +0000"
     },
     "done": true
   },
