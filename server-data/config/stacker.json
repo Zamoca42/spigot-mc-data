@@ -1,0 +1,12 @@
+{
+  "maxStacker": 320,
+  "fontOverride": true,
+  "itemCountScaleInt": 25,
+  "itemOverride": [
+    "minecraft:bundle:1",
+    "minecraft:totem_of_undying:16",
+    "#c:potions:16",
+    "#inmis:backpacks:1",
+    "#techreborn:not_stackable:1"
+  ]
+}
