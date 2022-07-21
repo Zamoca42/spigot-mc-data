@@ -38,6 +38,7 @@ services:
       - ./server-data:/data
   backup:
     image: itzg/mc-backup
+    restart: unless-stopped
     environment:
       BACKUP_INTERVAL: "6h"
       # instead of network_mode below, could declare RCON_HOST
